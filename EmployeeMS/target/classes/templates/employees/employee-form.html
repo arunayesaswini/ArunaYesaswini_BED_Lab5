@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+
+<title>Employee Management System</title>
+
+</head>
+
+<body>
+
+
+	<div class="container">
+
+		<h3 style="color: blue">Employee Management</h3>
+
+		<form action="#" th:action="@{/employee/save}" th:object="${employee}"
+			method="POST">
+
+
+			<p class="h4 mb-4">Create New Employee</p>
+
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}" /> <input type="text"
+				th:field="*{firstname}" class="form-control mb-4 col-4"
+				placeholder="Firstname"> <input type="text"
+				th:field="*{lastname}" class="form-control mb-4 col-4"
+				placeholder="Lastname"> <input type="text"
+				th:field="*{email}" class="form-control mb-4 col-4"
+				placeholder="Email">
+
+			<button type="submit" class="btn btn-info col-2">Submit</button>
+
+		</form>
+
+		<hr>
+		<a th:href="@{/employee/list}">Back to Employee List</a>
+
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
