@@ -24,39 +24,6 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
 
-	/*
-	 * @PostMapping("/addEmployee") public String
-	 * addEmployee(@RequestParam("employeeid") int
-	 * eid, @RequestParam("employeefirstname") String fname,
-	 * 
-	 * @RequestParam("employeelastname") String
-	 * lname, @RequestParam("employeeemail") String email) { Employee e2 = new
-	 * Employee(); e2.setId(eid); e2.setFirstname(fname); e2.setLastname(lname);
-	 * e2.setEmail(email);
-	 * 
-	 * employeeService.addEmployee(e2); return "Record Inserted Successfully"; }
-	 * 
-	 * 
-	 * 
-	 * @GetMapping("/getEmployee") public Employee
-	 * getEmployee(@RequestParam("employeeid") int eid) { return
-	 * employeeService.getEmployee(eid); }
-	 * 
-	 * 
-	 * @GetMapping("/getAllEmployees") public List<Employee> getAllEmployee() {
-	 * return employeeService.getAllEmployees(); }
-	 * 
-	 * @PutMapping("/updateEmployee") public Employee
-	 * updateEmployee(@RequestParam("employeeid") int eid, @RequestBody Employee e3)
-	 * { return employeeService.updateEmployee(eid, e3); }
-	 * 
-	 * @DeleteMapping("/deleteEmployee") public String
-	 * deleteEmp(@RequestParam("employeeid") int eid) {
-	 * employeeService.deleteEmployee(eid); return "Record Deleted"; }
-	 */
-
-	// --
-
 	@GetMapping("/list")
 	public String listEmployees(Model theModel) {
 		List<Employee> listemployees = employeeService.getAllEmployees();
